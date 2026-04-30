@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Class Schedule Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY DESIGN */
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:linear-gradient(135deg,#f6d9ff,#e7c8ff,#d4b3ff);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/* HEADER */
+header{
+    text-align:center;
+    padding:30px;
+}
+
+/* TITLE DESIGN */
+.title-box{
+    display:inline-block;
+    background:linear-gradient(135deg,#7b2cbf,#9d4edd);
+    color:white;
+    padding:15px 40px;
+    border-radius:12px;
+    font-size:28px;
+    letter-spacing:1px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* MAIN CONTAINER */
+main{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    padding:20px;
+}
+
+/* CONTENT CARD */
+.container{
+    width:95%;
+    max-width:1000px;
+    background:white;
+    padding:35px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* SECTION TITLES */
+h2{
+    margin-top:25px;
+    margin-bottom:12px;
+    color:#7b2cbf;
+    border-left:5px solid #9d4edd;
+    padding-left:10px;
+}
+
+/* LIST STYLE */
+ol,ul{
+    padding-left:25px;
+    margin-bottom:15px;
+}
+
+li{
+    margin:6px 0;
+    font-size:15px;
+}
+
+/* TABLE DESIGN */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+/* TABLE HEADER */
+thead{
+    background:#7b2cbf;
+    color:white;
+}
+
+th,td{
+    padding:12px;
+    text-align:left;
+}
+
+/* ROWS */
+tbody tr{
+    border-bottom:1px solid #eee;
+    transition:0.2s;
+}
+
+tbody tr:nth-child(even){
+    background:#faf5ff;
+}
+
+/* HOVER EFFECT */
+tbody tr:hover{
+    background:#f0e6ff;
+    transform:scale(1.01);
+}
+
+/* FOOTER ROW */
+tfoot{
+    background:#f3e8ff;
+    font-weight:bold;
+}
+
+/* PAGE FOOTER */
+footer{
+    text-align:center;
+    padding:15px;
+    background:#7b2cbf;
+    color:white;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+</style>
+</head>
+
+<body>
+ 
+<header>
+<h1 class="title-box">Class Schedule Page</h1>
+</header>
+
+<main>
+
+<div class="container">
+
+<section>
+<h2>Student Information</h2>
+<ul>
+<li><strong>Name:</strong> Melody Mitz Ramas</li>
+<li><strong>Course:</strong> BSIT</li>
+<li><strong>Section:</strong> 1D</li>
+<li><strong>School:</strong> Cordova Public College</li>
+</ul>
+</section>
+
+<section>
+<h2>Daily Class Schedule (Ordered List)</h2>
+<ol>
+<li>Understanding the Self 7:00am - 8:30am</li>
+<li>NSTP 8:30am - 10:00am</li>
+<li>Programming 10:00am - 1:00pm</li>
+<li>Office Productivity Tools 11:00am - 12:00pm</li>
+<li>Sining 10:00am - 12:00pm</li>
+<li>Introduction to Computing 1:00pm - 2:00pm</li>
+<li>Pathfit 2:00pm - 3:00pm</li>
+<li>Mathematics in the Modern World 3:00pm - 4:00pm</li>
+<li>Precal 4:00pm - 5:00pm</li>
+</ol>
+</section>
+
+<section>
+<h2>Writing Materials (Unordered List)</h2>
+<ul>
+<li>Pens</li>
+<li>Highlighters</li>
+<li>Pencil</li>
+</ul>
+</section>
+
+<section>
+<h2>Student Grade Table</h2>
+
+<table>
+
+<thead>
+<tr>
+<th>Name of Instructor</th>
+<th>Subject</th>
+<th>Final Grade</th>
+</tr>
+</thead>
+
+<tbody>
+<tr><td>Mr. Jordan Yagong</td><td>Precal</td><td>1.5</td></tr>
+<tr><td>Ms. Mariz Yagong</td><td>Understanding The Self</td><td>2.3</td></tr>
+<tr><td>Mr. Leo Francis James Paquibot</td><td>National Service Training Program</td><td>2.3</td></tr>
+<tr><td>Ms. Irene Eda</td><td>Computer Programming 1</td><td>2.1</td></tr>
+<tr><td>Mr. John Gil Paquibot</td><td>Movement Competency Training</td><td>1.3</td></tr>
+<tr><td>Mr. Laurenzo Leonizo</td><td>Office Productivity Tools</td><td>2.0</td></tr>
+<tr><td>Mr. Bernie C. Empaces</td><td>Introduction to Computing</td><td>2.0</td></tr>
+<tr><td>Mr. Emmanuel Ando</td><td>Sining ng Komunikasyon</td><td>1.7</td></tr>
+</tbody>
+
+<tfoot>
+<tr>
+<td colspan="2">Average Score</td>
+<td>1.84</td>
+</tr>
+</tfoot>
+
+</table>
+
+</section>
+
+</div>
+
+</main>
+
+<footer>
+MY FIRST SEMESTER CLASS SCHEDULE AND FINAL GRADES
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Melody Mitz Ramas | Mini Website</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    /* Fonts & Body */
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+    body {
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        background: linear-gradient(135deg, #e0f0ff, #cce6ff);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: background 1s ease;
+    }
+
+    /* Navigation */
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 70px;
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(15px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        box-shadow: 0 8px 25px rgba(0, 102, 204, 0.2);
+        z-index: 1000;
+    }
+
+    .nav-btn {
+        background: none;
+        border: none;
+        color: #004080;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        padding: 10px 15px;
+        border-radius: 10px;
+        transition: 0.3s;
+    }
+
+    .nav-btn:hover {
+        color: #0066cc;
+        text-shadow: 0 0 10px #66b3ff;
+    }
+
+    .nav-btn.active {
+        color: #0066cc;
+        text-shadow: 0 0 15px #66b3ff;
+    }
+
+    /* Content area */
+    .content-area {
+        margin-top: 120px;
+        width: 90%;
+        max-width: 700px;
+    }
+
+    /* Page Content */
+    .page-content {
+        display: none;
+        padding: 20px;
+    }
+
+    .active-page {
+        display: block;
+    }
+
+    /* Boxes for Home, About, Contact */
+    .box {
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 25px;
+        padding: 25px;
+        margin-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(0, 102, 204, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(0, 102, 204, 0.3);
+    }
+
+    h1, h2 {
+        color: #004080;
+        margin-bottom: 15px;
+    }
+
+    /* Images & Media */
+    img, video, iframe, audio {
+        width: 100%;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        transition: transform 0.3s ease;
+    }
+
+    img:hover, video:hover, iframe:hover {
+        transform: scale(1.02);
+    }
+
+    /* Name Box */
+    .name-box {
+        background: linear-gradient(145deg, #cce6ff, #99ccff);
+        border: 2px solid #3399ff;
+        padding: 20px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 1.5rem;
+        box-shadow: 0 5px 20px rgba(0, 102, 204, 0.2);
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    /* Hobby Box */
+    .hobby-box {
+        background: linear-gradient(145deg, #cce6ff, #99ccff);
+        border: 2px solid #3399ff;
+        padding: 15px;
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgba(0, 102, 204, 0.2);
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+    .hobby-box img {
+        margin-bottom: 15px;
+    }
+
+    /* Email Box */
+    .email-box {
+        background: linear-gradient(145deg, #cce6ff, #99ccff);
+        border: 2px solid #3399ff;
+        padding: 15px;
+        border-radius: 20px;
+        font-weight: bold;
+        box-shadow: 0 5px 15px rgba(0, 102, 204, 0.2);
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+</style>
+</head>
+<body>
+
+<nav>
+    <button class="nav-btn active" onclick="openTab('home', this)">Home</button>
+    <button class="nav-btn" onclick="openTab('about', this)">About</button>
+    <button class="nav-btn" onclick="openTab('contact', this)">Contact</button>
+</nav>
+
+<div class="content-area">
+
+    <!-- HOME -->
+    <div id="home" class="page-content active-page">
+        <div class="box">
+            <div class="name-box">Melody Mitz Ramas</div>
+            <h2>My Personal Page</h2>
+            <img src="img/melody.jpg" alt="melody">
+            <audio controls>
+                <source src="img/vid1.mp3" type="audio/mpeg">
+            </audio>
+            <h2>Activity Before</h2>
+            <video controls width="500">
+    <source src="123.jpg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div id="about" class="page-content">
+        <div class="box">
+            <h1>About Me</h1>
+            <img src="hobby.jpg" alt="My Hobby">
+            <audio controls>
+                <source src="img/vid2.mp3" type="audio/mpeg">
+            </audio>
+            <h2>My Hobby</h2>
+            <div class="hobby-box">
+                <img src="https://images.unsplash.com/photo-1601231544355-0a556dd2dbd6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8aGlwLWhvcCBkYW5jZXJ8fHx8fHwxNjgyNzQ0NzA5&ixlib=rb-4.0.3&q=80&w=1080" alt="Hip Hop Dance Group">
+                <p>
+                    I love dancing and joining dance competitions because it allows me to express myself and have fun with others. I also enjoy learning new things, whether it’s trying out a new skill, exploring interesting topics, or discovering something about the world around me. These hobbies keep me active, curious, and motivated every day, and I always look forward to finding new ways to challenge myself and grow.
+                </p>
+            </div>
+            <h2>Favorite Sci-Fi Movie</h2>
+            <iframe height="250" src="https://www.youtube.com/embed/CnZtc0Q7x8w" title="Favorite Sci-Fi Movie" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div id="contact" class="page-content">
+        <div class="box">
+            <h1>Contact & Favorite Place</h1>
+            <div class="email-box">Email: melodymitzramas363@gmail.com</div>
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Sea View">
+            <audio controls>
+                <source src="img/vid3.mp3" type="audio/mpeg">
+            </audio>
+            <h2>Life of an IT Student</h2>
+            <!-- TikTok video embed -->
+    <blockquote class="tiktok-embed"
+      cite="https://www.tiktok.com/@itsmekurtandrei__/video/7484804110802226450"
+      data-video-id="7484804110802226450"
+      style="max-width: 605px;min-width: 325px;">
+      <section>
+        <a target="_blank"
+           title="@itsmekurtandrei__"
+           href="https://www.tiktok.com/@itsmekurtandrei__">@itsmekurtandrei__</a>
+      </section>
+    </blockquote>
+    <script async src="https://www.tiktok.com/embed.js"></script>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function openTab(tabName, btn) {
+        var pages = document.getElementsByClassName("page-content");
+        for (var i = 0; i < pages.length; i++) {
+            pages[i].classList.remove("active-page");
+        }
+        var buttons = document.getElementsByClassName("nav-btn");
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].classList.remove("active");
+        }
+        document.getElementById(tabName).classList.add("active-page");
+        btn.classList.add("active");
+    }
+</script>
+
+</body>
+</html>
