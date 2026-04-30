@@ -73,3 +73,8 @@ body {
     background: #333;
     color: pink;
 }
+.author {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: rgb(255, 0, 0);
+}
